@@ -1,7 +1,7 @@
 // src/data/questions.js
 
 const questions = {
-  cloudComputing: [
+  cloud_Computing: [
     {
       id: 1,
       question: "What is cloud computing?",
@@ -25,7 +25,7 @@ const questions = {
       answer: "All of the above",
     },
   ],
-  database: [
+  Database: [
     {
       id: 1,
       question: "What is a database?",
@@ -49,7 +49,7 @@ const questions = {
       answer: "SQL",
     },
   ],
-  frontend: [
+  Frontend: [
     {
       id: 1,
       question: "What does HTML stand for?",
@@ -73,7 +73,7 @@ const questions = {
       answer: "React",
     },
   ],
-  cryptography: [
+  Cryptography: [
     {
       id: 1,
       question: "What is cryptography?",

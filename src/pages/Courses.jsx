@@ -50,7 +50,7 @@ const Courses = () => {
                 {
                     posts.map((items, key) => (
                         <article className=" w-10/12 mx-auto mt-4 shadow-lg border border-[#c40094] text-white rounded-md duration-300 hover:shadow-sm" key={key}>
-                            <Link to={`/quiz/${key+1}`}  >
+                            <Link to={`/quiz/${items.num}`}  >
                               <div className='p-4'>
                               <img src={items.img} loading="lazy" alt={items.title}  className="w-full h-48 rounded-t-md" />
                                 <div className="pt-3 ml-4 mr-2 mb-3">
