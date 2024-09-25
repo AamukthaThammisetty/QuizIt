@@ -1,31 +1,35 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
 const Courses = () => {
   const posts = [
     {
         title: "Cloud computing",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJzWzTUm8enYQrVhmHkmSyVtM7izAAWE_-TQ&s",
         questions:"5 questions (s)",
+        num:1
 
 
     },
     {
       title: "Data Base",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwxSD9Qg7IPwqCVFepnvfA-v0ydWTluEEwqg&s",
-      questions:"7 questions (s)"
+      questions:"7 questions (s)",
+      num:2
 
   },
     {
       title: "Frontend",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Qkc-dcq-cxiNh9h8kpP_D8t9erwmZ56ZJg&s",
-      questions:"5 questions (s)"
+      questions:"5 questions (s)",
+      num:3
 
   },
   {
     title: "Cryptography",
     questions:"5 questions (s)",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-lYSXPGYtAwGr9mFlxuRkiwsUvkzd9SrzFA&s",
-
+    num:4
   },
 ]
   return (
@@ -36,6 +40,7 @@ const Courses = () => {
             <div className="text-center  pt-3">
                 <h1 className="text-3xl font-semibold">
                    My <span className='text-white'>Quizizz</span> 
+                   
                 </h1>
                 <p className="mt-3 text-gray-500  text-3xl text-bold ">
                     "Quiz It, Prove It!"
@@ -45,15 +50,9 @@ const Courses = () => {
                 {
                     posts.map((items, key) => (
                         <article className=" w-10/12 mx-auto mt-4 shadow-lg border border-[#c40094] text-white rounded-md duration-300 hover:shadow-sm" key={key}>
-                            <a href={items.href} >
+                            <Link to={`/quiz/${key+1}`}  >
                               <div className='p-4'>
                               <img src={items.img} loading="lazy" alt={items.title}  className="w-full h-48 rounded-t-md" />
-                                <div className="flex items-center mt-2 pt-3 ml-4 mr-2">
-                                    <div className="ml-3">
-                                        <span className="block ">{}</span>
-                                        <span className="block text-sm">{items.date}</span>
-                                    </div>
-                                </div>
                                 <div className="pt-3 ml-4 mr-2 mb-3">
                                     <h3 className="text-xl ">
                                         {items.title}
@@ -62,7 +61,7 @@ const Courses = () => {
                                 </div>
                               </div>
                                 
-                            </a>
+                            </Link>
                         </article>
                     ))
                 }
