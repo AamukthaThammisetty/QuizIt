@@ -43,7 +43,7 @@ if (!courseQuestions || courseQuestions.length === 0) {
                     type="radio"
                     name={q.id}
                     value={option}
-                    className="form-radio text-indigo-600"
+                    className="form-radio"
                   />
                   <span className="ml-2">{option}</span>
                 </label>
